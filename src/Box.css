@@ -1,0 +1,14 @@
+.Box {
+    border-radius: 9px;
+    margin: 20px;
+    float: left;
+    position: relative;
+    /* don't need redundancy since you have defaults for styles in componnent file */
+}
+
+.BoxButton {
+    float: left;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}

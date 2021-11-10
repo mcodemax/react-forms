@@ -1,0 +1,8 @@
+.NewBoxForm {
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+    /* bottom:10em; element disspears, why? a parent div is relative.*/
+}
+
+/* https://www.youtube.com/watch?v=jx5jmI0UlXU 5:30 */
