@@ -12,7 +12,7 @@ it("matches snapshot", () => {
                     height:"100px",
                     width: "50px",
                     backgroundColor: blue,
-                    boxId: uuid()
+                    boxId: 20 //don't use uuid b/c it's randomized randomized
                 };
     const { asFragment } = render(<Box {...obj}/>);
     expect(asFragment()).toMatchSnapshot();
