@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "./Box.css";
+// import { v4 as uuid } from 'uuid';
 
-const Box = ({height="50px", width="50px", backgroundColor="#555", removeBox}) => {//can I have default css style then change in react?
-    const [showBox, setShowBox] = useState(true); 
-    //might need to move this piece of state up a level^
+const Box = ({height="50px", width="50px", backgroundColor="#555", removeBox, boxId}) => {//can I have default css style then change in react?
+    
 
-    return showBox ? (
+    return (
         <div className="Box">
-            <div  className="BoxHolder"
+            <div className="BoxHolder"
                 style={{height: height, 
                 width: width,
                 backgroundColor:backgroundColor}}>
             </div>
-            <button className="BoxButton" onClick={() => removeBox()}>X</button>
+            <button className="BoxButton" onClick={() => removeBox(boxId)}>X</button>
         </div>
         // remove box does nothing right now
-    ) : <></>;
+    );
 };
 
 export default Box;

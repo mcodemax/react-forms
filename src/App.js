@@ -7,7 +7,7 @@ import Box from './Box';
 function App() {
   return (
     <div className="App">
-      <Box height={50}/>
+      {/* <Box height={'0px'} width={'0px'}/> */}
       <BoxList />
     </div>
   );
