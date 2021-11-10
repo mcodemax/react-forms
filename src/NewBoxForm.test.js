@@ -8,6 +8,8 @@ it("should render", () => {
   render(<NewBoxForm/>)
 });
 
+  
+  //may need a lot of change in NewBoxForm doesn't actually need initial args
 it("matches snapshot", () => {
     const obj = {
                     height:"100px",
