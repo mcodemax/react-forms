@@ -12,7 +12,7 @@ const NewBoxForm = ({addBox}) => {
         
 
     }
-
+    //https://reactjs.org/docs/uncontrolled-components.html
 
     const onFormSubmit = (evt) => {
         evt.preventDefault();
