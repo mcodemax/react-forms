@@ -2,16 +2,6 @@ import React, { useState } from "react";
 import "./BoxList.css";
 import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
-import { v4 as uuid } from 'uuid';
-
-const dummyBoxes = [
-    {height:"50px", width:"50px", backgroundColor:"#555", boxId: uuid()}, 
-    {height:"50px", width:"50px", backgroundColor:"#555", boxId: uuid()}, 
-    {height:"50px", width:"50px", backgroundColor:"#555", boxId: uuid()}, 
-    {height:"50px", width:"50px", backgroundColor:"#555", boxId: uuid()}, 
-    {height:"50px", width:"50px", backgroundColor:"#555", boxId: uuid()}]
-
-console.log(dummyBoxes)
 
 const BoxList = () => {
     //an ele in boxes is an obj:{height, width, backgroundColor}

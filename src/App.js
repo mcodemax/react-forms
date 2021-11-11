@@ -1,14 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import BoxList from './BoxList';
 
-import Box from './Box';
+//for part 2 below
+import Todo from './part2/Todo';
+import TodoList from './part2/TodoList';
+import NewTodoForm from './part2/NewTodoForm';
+
+// import Box from './Box';
 
 function App() {
   return (
     <div className="App">
-      {/* <Box height={'0px'} width={'0px'}/> */}
-      <BoxList />
+      {/* <BoxList /> */}
+      <TodoList/>
     </div>
   );
 }

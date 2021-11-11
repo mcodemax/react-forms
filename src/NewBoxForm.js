@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NewBoxForm.css";
 import { v4 as uuid } from 'uuid';
 
@@ -8,9 +8,19 @@ import { v4 as uuid } from 'uuid';
  * logic.
  */
 const NewBoxForm = ({addBox}) => {
+    const emptyForm = {
+        backgroundColor:'',
+        width:'',
+        height:''
+    };
+    const [formData, setFormData] = useState(emptyForm);
+    
     const handleFormChange = (evt) => {
-        
-
+        const {name, value} = evt.target;
+        setFormData(formData => ({
+            ...formData,
+            [name]: value
+        }));
     }
     //https://reactjs.org/docs/uncontrolled-components.html
 
@@ -23,19 +33,18 @@ const NewBoxForm = ({addBox}) => {
         backgroundColor = backgroundColor.value;
         const boxId = uuid();
 
-        console.log({ width, height, backgroundColor } )
-
         addBox({ width, height, backgroundColor, boxId })
-        //add defaults later
+        
+        setFormData(emptyForm);
     };
     return (
         <form className="NewBoxForm" onSubmit={onFormSubmit}>
             <label htmlFor="width">Width</label><br/>
-            <input type="text" id="width" name="width"/><br/>
+            <input type="text" id="width" name="width" value={formData.width} onChange={handleFormChange}/><br/>
             <label htmlFor="height">Height</label><br/>
-            <input type="text" id="height" name="height" /><br/>
+            <input type="text" id="height" name="height" value={formData.height} onChange={handleFormChange}/><br/>
             <label htmlFor="backgroundColor">Background Color of Box</label><br/>
-            <input type="text" id="backgroundColor" name="backgroundColor" /><br/>
+            <input type="text" id="backgroundColor" name="backgroundColor" value={formData.backgroundColor} onChange={handleFormChange}/><br/>
             <input type="submit" id="submit" name="submit" />
         </form>
     )
